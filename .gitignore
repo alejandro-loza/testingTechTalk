@@ -1,0 +1,12 @@
+.gradle/
+.idea/
+build/
+logs
+out/
+.project/
+.settings/
+assesorAssign.iml
+*.iml
+bin/
+gradlew.bat
+gradle/wrapper/gradle-wrapper.properties
