@@ -3,9 +3,11 @@ package mx.com.kubo.techTalk.repository
 import mx.com.kubo.techTalk.models.Assessor
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
+import spock.lang.Ignore
 import spock.lang.Specification
 
 @DataJpaTest
+@Ignore
 class AssessorRepositorySpec extends Specification {
 
     @Autowired
