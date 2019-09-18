@@ -1,4 +1,3 @@
-import spock.lang.Ignore
 import spock.lang.Specification
 import spock.lang.Unroll
 
@@ -6,12 +5,31 @@ class Fibonacci extends Specification {
 
     static final FIBONACCI = '1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,…'
 
-    def fib(n) {
-        if (n < 2) return 1
-        else return fib(n - 1) + fib(n - 2)
+    /*   def fib(n) {
+           if (n < 2) return 1
+           else return fib(n - 1) + fib(n - 2)
+       }
+   */
+
+    //  def fib(n) {n<2 ? 1 : fib(n-1)+fib(n-2)}
+
+    class Fibber {
+        def old = 1, fib = 1, current = 1
+
+        def next() {
+            def newFib = fib + old
+            old = fib
+            fib = newFib
+            current++
+        }
     }
 
-  //  def fib(n) {n<2 ? 1 : fib(n-1)+fib(n-2)}
+
+    def fib(n) {
+        def fibber = new Fibber()
+        while(fibber.current < n) fibber.next()
+        return fibber.fib
+    }
 
     def 'Should give the fibonacci sequence at index 1'() {
 
@@ -34,7 +52,6 @@ class Fibonacci extends Specification {
     }
 
     @Unroll
-    @Ignore
     def 'Should th fibonacci number at index #index to equals #fibo'() {
 
         expect: 'the index is #index'
@@ -55,27 +72,9 @@ class Fibonacci extends Specification {
         10    | 89
         11    | 144
         300   | -2143601239
+        3000  | 628070097
 
     }
 
-    class Fibber {
-        def old=1,fib=1,current=1
 
-
-        def next() {
-            def newFib=fib+old
-            old=fib
-            fib=newFib
-            current++
-        }
-    }
-
-
-
-/*    def fib(n) {
-        def fibber = new Fibber();
-        while(fibber.current < n) fibber.next()
-        return fibber.fib
-    }
-*/
 }

@@ -58,7 +58,7 @@ class AssessorControllerSpec extends Specification {
         def response = assessorController.findByUserId(assessorCreateRequestValidator.user)
 
         then: ' una vez debé llamarse  el método create del servicio assessor service con el validador indicado y respondera el dto que hemos generado antes'
-        1 * assessorController.assessorService.findByUserId(0) >> assessorDto //esto es un mock arbitrario
+        1 * assessorController.assessorService.findByUserId(assessorCreateRequestValidator.user) >> assessorDto //esto es un mock arbitrario
 
         and: 'la respuesta debe ser el dto que mockeamos si en el controller se procesará la respuesta se debé esperar un resultado distinto'
 
@@ -79,7 +79,7 @@ class AssessorControllerSpec extends Specification {
 
         and: 'LA RESPUESTA DEBE SER UNA ASSESSOR NOT FOUND EXCEPTION'
 
-        thrown(NotFoundException)
+        thrown(AssessorNotFoundException)
 
     }
 

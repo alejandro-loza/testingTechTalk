@@ -1,8 +1,9 @@
 package mx.com.kubo.techTalk.services.impl
 
-import javassist.NotFoundException
+
 import mx.com.kubo.assessor.assign.commons.validators.AssessorCreateRequestValidator
 import mx.com.kubo.assessor.assign.commons.validators.AssessorUpdateRequestValidator
+import mx.com.kubo.techTalk.exceptions.AssessorAlreadyExistException
 import mx.com.kubo.techTalk.exceptions.AssessorNotFoundException
 import mx.com.kubo.techTalk.models.Assessor
 import mx.com.kubo.techTalk.repository.AssessorRepository
@@ -15,7 +16,8 @@ import org.springframework.context.annotation.Import
 import spock.lang.Specification
 
 @DataJpaTest
-@Import([AssessorServiceImpl, MapperConverter]) //agregamos al contexto estos beans
+@Import([AssessorServiceImpl, MapperConverter])
+//agregamos al contexto estos beans
 class AssessorServiceIntSpec extends Specification {
 
     private static final String USER_ID = 'assessor'
@@ -27,8 +29,8 @@ class AssessorServiceIntSpec extends Specification {
 
     Assessor assessor = new Assessor(USER_ID, false)
 
-    def "Should create an assessor"(){
-        given:'an saved assessor'
+    def "Should create an assessor"() {
+        given: 'an saved assessor'
 
         AssessorCreateRequestValidator assessorInputRequest = new AssessorCreateRequestValidator(
                 'userSalvaje', true)
@@ -39,17 +41,17 @@ class AssessorServiceIntSpec extends Specification {
         then:
         response.class.simpleName == 'AssessorDto'
         response.with {
-            assert user != 'userSalvaje'
-            assert !assigned
-            assert id == null
-            assert id.class.simpleName != 'Long'
+            assert user == 'userSalvaje'
+            assert assigned
+            assert id != null
+            assert id.class.simpleName == 'Long'
 
         }
 
     }
 
-    def "Should try to create an assessor that already exist and throw already exist exception"(){
-        given:'an saved assessor'
+    def "Should try to create an assessor that already exist and throw already exist exception"() {
+        given: 'an saved assessor'
         Assessor alreadySavedAssessor = assessorRepository.save(assessor)
 
         and:
@@ -60,7 +62,7 @@ class AssessorServiceIntSpec extends Specification {
         assessorService.create(assessorInputRequest)
 
         then:
-        thrown(AssessorNotFoundException)
+        thrown(AssessorAlreadyExistException)
 
     }
 
@@ -77,7 +79,7 @@ class AssessorServiceIntSpec extends Specification {
         then:
         response.with {
             assert user == USER_ID
-            assert !assigned
+            assert assigned
         }
 
     }
@@ -94,7 +96,7 @@ class AssessorServiceIntSpec extends Specification {
 
         then:
         response.with {
-            assert user != 'anotherUserId'
+            assert user == 'anotherUserId'
             assert !assigned
         }
 
@@ -109,7 +111,7 @@ class AssessorServiceIntSpec extends Specification {
         assessorService.update(assessorUpdateRequestValidator, 'NOT_FOUND')
 
         then:
-        thrown(NotFoundException)
+        thrown(AssessorNotFoundException)
     }
 
 }
