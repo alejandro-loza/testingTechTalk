@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ce423df-696c-4f69-aa30-7fd0c7a9b22e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/com/kubo/techTalk/exceptions/AssessorAlreadyExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/com/kubo/techTalk/exceptions/AssessorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mx/com/kubo/techTalk/exceptions/AssessorNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/groovy/mx/com/kubo/techTalk/controllers/AssessorControllerSpec.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/mx/com/kubo/techTalk/controllers/AssessorControllerSpec.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/groovy/mx/com/kubo/techTalk/services/impl/AssessorServiceIntSpec.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/groovy/mx/com/kubo/techTalk/services/impl/AssessorServiceIntSpec.groovy" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -54,13 +50,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/mx/com/kubo/techTalk/services/impl/AssessorServiceIntSpec.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="63" column="62" lean-forward="true" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
+            <state relative-caret-position="527">
+              <caret line="114" column="1" lean-forward="true" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
               <folding>
-                <element signature="e#44#128#0" expanded="true" />
+                <element signature="e#44#78#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,14 +71,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/groovy/mx/com/kubo/techTalk/controllers/AssessorControllerSpec.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="560">
+              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <element signature="e#42#76#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build/jacocoHtml/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="62" lean-forward="true" selection-start-column="62" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -99,11 +104,6 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mx/com/kubo/techTalk/exceptions/AssessorAlreadyExistException.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mx/com/kubo/techTalk/utils/MapperConverter.java">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -150,9 +150,9 @@
         <option value="$PROJECT_DIR$/src/main/java/mx/com/kubo/techTalk/exceptions/AssessorAlreadyExistException.java" />
         <option value="$PROJECT_DIR$/src/main/java/mx/com/kubo/techTalk/services/imp/AssessorServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/mx/com/kubo/techTalk/BasicApplication.java" />
-        <option value="$PROJECT_DIR$/src/test/groovy/mx/com/kubo/techTalk/services/impl/AssessorServiceIntSpec.groovy" />
         <option value="$PROJECT_DIR$/src/main/java/mx/com/kubo/techTalk/controllers/AssessorController.java" />
         <option value="$PROJECT_DIR$/src/test/groovy/mx/com/kubo/techTalk/controllers/AssessorControllerSpec.groovy" />
+        <option value="$PROJECT_DIR$/src/test/groovy/mx/com/kubo/techTalk/services/impl/AssessorServiceIntSpec.groovy" />
       </list>
     </option>
   </component>
@@ -204,15 +204,6 @@
               <item name="testingTechTalk" type="b2602c69:ProjectViewProjectNode" />
               <item name="testingTechTalk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="techTalk" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testingTechTalk" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testingTechTalk" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -237,7 +228,7 @@
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="groovy" type="462c0819:PsiDirectoryNode" />
               <item name="techTalk" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -277,70 +268,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AssessorControllerSpec.Should not find an assessor and throw not found assessor exception">
-    <configuration name="AssessorControllerSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="testingTechTalk.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mx.com.kubo.techTalk.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mx.com.kubo.techTalk.controllers" />
-      <option name="MAIN_CLASS_NAME" value="mx.com.kubo.techTalk.controllers.AssessorControllerSpec" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AssessorControllerSpec.Should create an assessor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="testingTechTalk.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mx.com.kubo.techTalk.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mx.com.kubo.techTalk.controllers" />
-      <option name="MAIN_CLASS_NAME" value="mx.com.kubo.techTalk.controllers.AssessorControllerSpec" />
-      <option name="METHOD_NAME" value="Should create an assessor" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AssessorControllerSpec.Should find an assessor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="testingTechTalk.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mx.com.kubo.techTalk.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mx.com.kubo.techTalk.controllers" />
-      <option name="MAIN_CLASS_NAME" value="mx.com.kubo.techTalk.controllers.AssessorControllerSpec" />
-      <option name="METHOD_NAME" value="Should find an assessor" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AssessorControllerSpec.Should not find an assessor and throw not found assessor exception" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="testingTechTalk.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mx.com.kubo.techTalk.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="mx.com.kubo.techTalk.controllers" />
-      <option name="MAIN_CLASS_NAME" value="mx.com.kubo.techTalk.controllers.AssessorControllerSpec" />
-      <option name="METHOD_NAME" value="Should not find an assessor and throw not found assessor exception" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.AssessorServiceIntSpec.Should update an assessor's user ">
     <configuration name="AssessorServiceIntSpec" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="testingTechTalk.test" />
       <extension name="coverage">
@@ -356,13 +284,77 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AssessorServiceIntSpec.Should create an assessor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testingTechTalk.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mx.com.kubo.techTalk.services.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mx.com.kubo.techTalk.services.impl" />
+      <option name="MAIN_CLASS_NAME" value="mx.com.kubo.techTalk.services.impl.AssessorServiceIntSpec" />
+      <option name="METHOD_NAME" value="Should create an assessor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssessorServiceIntSpec.Should throw assignment type exception on update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testingTechTalk.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mx.com.kubo.techTalk.services.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mx.com.kubo.techTalk.services.impl" />
+      <option name="MAIN_CLASS_NAME" value="mx.com.kubo.techTalk.services.impl.AssessorServiceIntSpec" />
+      <option name="METHOD_NAME" value="Should throw assignment type exception on update" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssessorServiceIntSpec.Should update an assessor's assigned " type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testingTechTalk.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mx.com.kubo.techTalk.services.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mx.com.kubo.techTalk.services.impl" />
+      <option name="MAIN_CLASS_NAME" value="mx.com.kubo.techTalk.services.impl.AssessorServiceIntSpec" />
+      <option name="METHOD_NAME" value="Should update an assessor's assigned " />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssessorServiceIntSpec.Should update an assessor's user " type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testingTechTalk.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mx.com.kubo.techTalk.services.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="mx.com.kubo.techTalk.services.impl" />
+      <option name="MAIN_CLASS_NAME" value="mx.com.kubo.techTalk.services.impl.AssessorServiceIntSpec" />
+      <option name="METHOD_NAME" value="Should update an assessor's user " />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AssessorControllerSpec.Should not find an assessor and throw not found assessor exception" />
-        <item itemvalue="JUnit.AssessorControllerSpec.Should find an assessor" />
-        <item itemvalue="JUnit.AssessorControllerSpec" />
-        <item itemvalue="JUnit.AssessorControllerSpec.Should create an assessor" />
+        <item itemvalue="JUnit.AssessorServiceIntSpec.Should update an assessor's user " />
+        <item itemvalue="JUnit.AssessorServiceIntSpec.Should update an assessor's assigned " />
         <item itemvalue="JUnit.AssessorServiceIntSpec" />
+        <item itemvalue="JUnit.AssessorServiceIntSpec.Should throw assignment type exception on update" />
+        <item itemvalue="JUnit.AssessorServiceIntSpec.Should create an assessor" />
       </list>
     </recent_temporary>
   </component>
@@ -380,42 +372,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Fibonacci_Should_give_the_fibonacci_number_at_index_#index_is_#fibo - 2019.09.18 at 14h 48m 39s.xml">
-      <configuration name="Fibonacci.Should give the fibonacci number at index #index is #fibo" configurationId="JUnit" />
+    <history-entry file="AssessorServiceIntSpec_Should_try_to_create_an_assessor_that_already_exist_and_throw_already_exist_exception - 2019.09.18 at 16h 53m 44s.xml">
+      <configuration name="AssessorServiceIntSpec.Should try to create an assessor that already exist and throw already exist exception" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Fibonacci_Should_give_the_fibonacci_number_at_index_#index_is_#fibo - 2019.09.18 at 14h 50m 19s.xml">
-      <configuration name="Fibonacci.Should give the fibonacci number at index #index is #fibo" configurationId="JUnit" />
+    <history-entry file="AssessorServiceIntSpec_Should_try_to_create_an_assessor_that_already_exist_and_throw_already_exist_exception - 2019.09.18 at 16h 53m 54s.xml">
+      <configuration name="AssessorServiceIntSpec.Should try to create an assessor that already exist and throw already exist exception" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Fibonacci_Should_give_the_fibonacci_number_at_index_#index_is_#fibo - 2019.09.18 at 14h 55m 52s.xml">
-      <configuration name="Fibonacci.Should give the fibonacci number at index #index is #fibo" configurationId="JUnit" />
+    <history-entry file="AssessorServiceIntSpec_Should_try_to_create_an_assessor_that_already_exist_and_throw_already_exist_exception - 2019.09.18 at 16h 54m 44s.xml">
+      <configuration name="AssessorServiceIntSpec.Should try to create an assessor that already exist and throw already exist exception" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssessorRepositorySpec_Should_find_an_user_ - 2019.09.18 at 15h 59m 49s.xml">
-      <configuration name="AssessorRepositorySpec.Should find an user " configurationId="JUnit" />
+    <history-entry file="AssessorServiceIntSpec_Should_create_an_assessor - 2019.09.18 at 16h 57m 11s.xml">
+      <configuration name="AssessorServiceIntSpec.Should create an assessor" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssessorServiceIntSpec - 2019.09.18 at 16h 10m 16s.xml">
-      <configuration name="AssessorServiceIntSpec" configurationId="JUnit" />
+    <history-entry file="AssessorServiceIntSpec_Should_create_an_assessor - 2019.09.18 at 16h 57m 47s.xml">
+      <configuration name="AssessorServiceIntSpec.Should create an assessor" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssessorControllerSpec_Should_create_an_assessor - 2019.09.18 at 16h 34m 07s.xml">
-      <configuration name="AssessorControllerSpec.Should create an assessor" configurationId="JUnit" />
+    <history-entry file="AssessorServiceIntSpec_Should_create_an_assessor - 2019.09.18 at 16h 58m 10s.xml">
+      <configuration name="AssessorServiceIntSpec.Should create an assessor" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssessorControllerSpec - 2019.09.18 at 16h 35m 15s.xml">
-      <configuration name="AssessorControllerSpec" configurationId="JUnit" />
+    <history-entry file="AssessorServiceIntSpec_Should_create_an_assessor - 2019.09.18 at 16h 58m 26s.xml">
+      <configuration name="AssessorServiceIntSpec.Should create an assessor" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssessorControllerSpec_Should_find_an_assessor - 2019.09.18 at 16h 38m 55s.xml">
-      <configuration name="AssessorControllerSpec.Should find an assessor" configurationId="JUnit" />
+    <history-entry file="AssessorServiceIntSpec_Should_create_an_assessor - 2019.09.18 at 16h 59m 28s.xml">
+      <configuration name="AssessorServiceIntSpec.Should create an assessor" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssessorControllerSpec_Should_find_an_assessor - 2019.09.18 at 16h 39m 09s.xml">
-      <configuration name="AssessorControllerSpec.Should find an assessor" configurationId="JUnit" />
+    <history-entry file="AssessorServiceIntSpec_Should_create_an_assessor - 2019.09.18 at 16h 59m 50s.xml">
+      <configuration name="AssessorServiceIntSpec.Should create an assessor" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AssessorControllerSpec_Should_find_an_assessor - 2019.09.18 at 16h 39m 21s.xml">
-      <configuration name="AssessorControllerSpec.Should find an assessor" configurationId="JUnit" />
+    <history-entry file="AssessorServiceIntSpec_Should_throw_assignment_type_exception_on_update - 2019.09.18 at 17h 01m 32s.xml">
+      <configuration name="AssessorServiceIntSpec.Should throw assignment type exception on update" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20704375" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17716116" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -425,7 +417,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25408942" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2519084" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,13 +456,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/mx/com/kubo/techTalk/Fibonacci.groovy" />
     <entry file="file://$PROJECT_DIR$/src/test/java/mx/com/kubo/techTalk/BasicApplicationTest.java" />
-    <entry file="file://$PROJECT_DIR$/build/jacocoHtml/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="45" selection-start-column="45" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mx/com/kubo/techTalk/services/Fibonacci.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/mx/com/kubo/techTalk/models/Assessor.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -567,16 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/groovy/mx/com/kubo/techTalk/services/impl/AssessorServiceIntSpec.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="63" column="62" lean-forward="true" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
-          <folding>
-            <element signature="e#44#128#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mx/com/kubo/techTalk/controllers/AssessorController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -586,10 +561,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/groovy/mx/com/kubo/techTalk/controllers/AssessorControllerSpec.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="560">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
           <folding>
             <element signature="e#42#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/jacocoHtml/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="62" lean-forward="true" selection-start-column="62" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/groovy/mx/com/kubo/techTalk/services/impl/AssessorServiceIntSpec.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="114" column="1" lean-forward="true" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
+          <folding>
+            <element signature="e#44#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
