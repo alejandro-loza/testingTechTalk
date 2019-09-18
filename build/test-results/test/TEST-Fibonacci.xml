@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Fibonacci" tests="3" skipped="1" failures="0" errors="0" timestamp="2019-09-18T21:14:35" hostname="pinks" time="0.008">
+  <properties/>
+  <testcase name="Should give the fibonacci sequence at index 1" classname="Fibonacci" time="0.001"/>
+  <testcase name="Should give the fibonacci sequence at index 4" classname="Fibonacci" time="0.007"/>
+  <testcase name="Should th fibonacci number at index #index to equals #fibo" classname="Fibonacci" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

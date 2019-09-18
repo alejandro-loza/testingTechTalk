@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testingTechTalk-v1
+  namespace: qa
+spec:
+  selector:
+    matchLabels:
+      app: testingTechTalk
+  strategy:
+    rollingUpdate:
+      maxSurge: 200%
+      maxUnavailable: 100%
+    type: RollingUpdate
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: testingTechTalk
+        version: v1
+    spec:
+      containers:
+        - name: testingTechTalk 
+          env:
+          - name: JAVA_OPTIONS
+            value: -Xms64m -Xmx128m -Djava.net.preferIPv4Stack=true -Djava.security.egd=file:///dev/./urandom -Dspring.profiles.active=qa
+          - name: JAEGER_SERVICE_NAME
+            value: qa-testingTechTalk
+          image: gcr.io/kubo-financiero-portal/testingTechTalk
+          imagePullPolicy: Always
+          livenessProbe:
+            httpGet:
+              path: /api/v1/actuator/health
+              port: 8080
+            initialDelaySeconds: 20
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /api/v1/actuator/health
+              port: 8080
+            initialDelaySeconds: 15
+            periodSeconds: 5
+          resources:
+            requests:
+              memory: 150Mi
+          ports:
+            - containerPort: 8080

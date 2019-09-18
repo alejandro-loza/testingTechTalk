@@ -1,0 +1,107 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.3.RELEASE'
+	}
+	repositories {
+		maven {
+			url 'https://developers.kubofinanciero.com/artifactory/erp'
+		}
+		mavenCentral()
+		jcenter()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3'
+		classpath 'nl.javadude.gradle.plugins:license-gradle-plugin:0.11.0'
+		classpath 'org.ajoberstar:gradle-git:1.3.2'
+		classpath 'org.kordamp.gradle:stats-gradle-plugin:0.2.0'
+		classpath 'com.github.ben-manes:gradle-versions-plugin:0.12.0'
+		classpath 'net.nemerosa:versioning:2.1.0'
+		classpath "io.spring.gradle:dependency-management-plugin:0.5.6.RELEASE"
+	}
+}
+
+
+plugins {
+	id 'groovy'
+	id "org.sonarqube" version "2.6"
+}
+
+apply from: 'gradle/code-coverage.gradle'
+apply from: 'gradle/code-quality.gradle'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'mx.com.kubo.techTalk'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+	maven {
+		url 'https://developers.kubofinanciero.com/artifactory/erp'
+	}
+	maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+	implementation "org.codehaus.groovy:groovy-all:2.4.15"
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	compile "io.jaegertracing:jaeger-tracerresolver:0.29.0"
+
+
+	testCompile "org.spockframework:spock-spring:1.1-groovy-2.4"
+	testCompile "org.spockframework:spock-core:1.2-groovy-2.4"
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	compile "io.opentracing.contrib:opentracing-spring-cloud-starter:0.2.1"
+	
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	compile('javax.xml.bind:jaxb-api:2.3.0')
+	testRuntime('com.h2database:h2')
+
+	compile('carousel:assessorAssignDtosLibrary:1.0.2')
+	compile group: 'org.modelmapper', name: 'modelmapper', version: '2.3.4'
+
+
+}
+
+
+jacocoTestReport {
+	reports {
+		xml.enabled false
+		csv.enabled false
+		html.destination file("${buildDir}/jacocoHtml")
+	}
+	afterEvaluate {
+		classDirectories = files(classDirectories.files.collect {
+			fileTree(dir: it, exclude: [
+					'**/TestingTechTalk.*',
+					'mx/com/kubo/techTalk/config'
+			])
+		})
+	}
+}
+
+jacocoTestCoverageVerification {
+	violationRules {
+		rule {
+			element = 'CLASS'
+			limit {
+				counter = 'LINE'
+				value = 'COVEREDRATIO'
+				minimum = 0.8
+			}
+			excludes = [
+					'mx.com.kubo.techTalk.TestingTechTalk',
+					'mx.com.kubo.techTalk.config'
+			]
+		}
+	}
+}
+
+test.finalizedBy jacocoTestReport

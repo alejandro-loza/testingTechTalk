@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testingTechTalk-v1
+  namespace: prod
+spec:
+  selector:
+    matchLabels:
+      app: testingTechTalk
+  strategy:
+    rollingUpdate:
+      maxSurge: 200%
+      maxUnavailable: 50%
+    type: RollingUpdate
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: testingTechTalk
+        version: v1
+    spec:
+      containers:
+      - name: testingTechTalk
+        env:
+        - name: JAVA_OPTIONS
+          value: -Xms128m -Xmx256m -Djava.net.preferIPv4Stack=true -Djava.security.egd=file:///dev/./urandom -Dspring.profiles.active=prod
+        image: gcr.io/kubo-financiero-portal/testingTechTalk
+        imagePullPolicy: Always
+        livenessProbe:
+          httpGet:
+            path: /api/v1/actuator/health
+            port: 8080
+          initialDelaySeconds: 50
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /api/v1/actuator/health
+            port: 8080
+          initialDelaySeconds: 45
+          periodSeconds: 5
+        resources:
+          requests:
+            memory: 300Mi
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: varlog
+          mountPath: /deployments/logs
+      - name: fluentd-es
+        image: gcr.io/google-containers/fluentd-elasticsearch:v2.0.1
+        env:
+        - name: FLUENTD_ARGS
+          value: --no-supervisor -q
+        resources:
+          limits:
+            memory: 50Mi
+          requests:
+            memory: 50Mi
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/fluent/config.d
+        - name: varlog
+          mountPath: /deployments/logs
+      volumes:
+      - name: varlog
+        emptyDir: {}
+      - name: config-volume
+        configMap:
+          name: fluentd-config
+
