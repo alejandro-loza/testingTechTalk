@@ -54,7 +54,28 @@ class Fibonacci extends Specification {
         9     | 55
         10    | 89
         11    | 144
+        300   | -2143601239
 
     }
 
+    class Fibber {
+        def old=1,fib=1,current=1
+
+
+        def next() {
+            def newFib=fib+old
+            old=fib
+            fib=newFib
+            current++
+        }
+    }
+
+
+
+/*    def fib(n) {
+        def fibber = new Fibber();
+        while(fibber.current < n) fibber.next()
+        return fibber.fib
+    }
+*/
 }
