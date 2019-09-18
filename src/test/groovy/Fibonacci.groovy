@@ -11,6 +11,8 @@ class Fibonacci extends Specification {
         else return fib(n - 1) + fib(n - 2)
     }
 
+  //  def fib(n) {n<2 ? 1 : fib(n-1)+fib(n-2)}
+
     def 'Should give the fibonacci sequence at index 1'() {
 
         when: 'the index is 1'
