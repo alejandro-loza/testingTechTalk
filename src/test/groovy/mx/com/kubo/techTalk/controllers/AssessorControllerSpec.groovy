@@ -6,8 +6,10 @@ import mx.com.kubo.assessor.assign.commons.validators.AssessorCreateRequestValid
 import mx.com.kubo.techTalk.exceptions.AssessorNotFoundException
 import mx.com.kubo.techTalk.services.AssessorService
 import org.springframework.beans.factory.annotation.Autowired
+import spock.lang.Ignore
 import spock.lang.Specification
 
+@Ignore
 class AssessorControllerSpec extends Specification {
 
     @Autowired

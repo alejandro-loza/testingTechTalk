@@ -62,7 +62,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 
 	compile('javax.xml.bind:jaxb-api:2.3.0')
-	testRuntime('com.h2database:h2')
+	compile('com.h2database:h2')
 
 	compile('carousel:assessorAssignDtosLibrary:1.0.2')
 	compile group: 'org.modelmapper', name: 'modelmapper', version: '2.3.4'

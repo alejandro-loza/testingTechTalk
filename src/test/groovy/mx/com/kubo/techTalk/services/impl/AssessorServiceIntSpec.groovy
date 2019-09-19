@@ -13,11 +13,13 @@ import mx.com.kubo.techTalk.utils.MapperConverter
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
 import org.springframework.context.annotation.Import
+import spock.lang.Ignore
 import spock.lang.Specification
 
 @DataJpaTest
-@Import([AssessorServiceImpl, MapperConverter])
-//agregamos al contexto estos beans
+
+@Import([AssessorServiceImpl, MapperConverter]) //agregamos al contexto estos beans
+
 class AssessorServiceIntSpec extends Specification {
 
     private static final String USER_ID = 'assessor'
