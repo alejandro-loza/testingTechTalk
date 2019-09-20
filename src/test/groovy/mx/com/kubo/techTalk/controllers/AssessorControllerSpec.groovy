@@ -38,7 +38,7 @@ class AssessorControllerSpec extends Specification {
         def response = assessorController.create(assessorCreateRequestValidator)
 
         then: ' una vez debé llamarse  el método create del servicio assessor service con el validador indicado y respondera el dto que hemos generado antes'
-        1 * assessorController.assessorService.create(assessorCreateRequestValidator) >> assessorDto //esto es un mock arbitrario
+        1 * assessorController.assessorService.create(assessorCreateRequestValidator) >> assessorDto //esto es un stub arbitrario
 
         and: 'la respuesta debe ser el dto que mockeamos si en el controller se procesara la respuesta se debé esperar un resultado distinto'
 
