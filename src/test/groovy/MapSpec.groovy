@@ -1,4 +1,4 @@
-package mx.com.kubo.techTalk
+
 
 import spock.lang.Specification
 
